@@ -1,0 +1,27 @@
+<% provide :title, 'Logowanie' %>
+
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+    <div class="modal-content halo">
+      <div class="col-12 user-img">
+        <%= image_tag 'profile-user.png', size: '70x70' %>
+      </div>
+
+      <form class="col-12">
+        <div class="form-group">
+          <i class="material-icons form-icon">email</i>
+          <input type="email" class="form-control" placeholder="Podaj swój email..." />
+        </div>
+        <div class="form-group">
+          <i class="material-icons form-icon">lock</i>
+          <input type="password" class="form-control" placeholder="Wprowadź hasło..." />
+        </div>
+        <button class="btn login-button" type="submit"><i class="small material-icons arrow-icon">subdirectory_arrow_right</i>Zaloguj</button>
+        <div class="col-12 forgot">
+          <a href="#">Zapomniałeś hasła? </a>
+        </div>
+      </form>
+    </div> <!-- End of modal -->
+
+  </div>
+</div>

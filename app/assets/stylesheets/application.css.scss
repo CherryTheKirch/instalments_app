@@ -1,0 +1,21 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+/*
+ */
+
+@import "bootstrap";
+@import "font-awesome";
+@import "font-awesome-sprockets";
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+  background: url(bg1.png) no-repeat center center fixed;
+  background-size: cover;
+}
