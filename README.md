@@ -1,3 +1,5 @@
-# README
+# Manage your constant payments
 
-This is just a simple project to mange constants payments like instalments
+Simple app to manage constant payments like, taxes, instalments or wahtever...
+
+Under construction...
