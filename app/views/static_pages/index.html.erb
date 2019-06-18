@@ -1,30 +1,11 @@
 <% provide :title, 'Strona główna' %>
-
-  <div class="jumbotron">
-    <h1 class="display-4">Ogarnij swoje płatności !</h1>
-    <p class="lead">Teraz twoje płatności staną się prostrze. Wszystko w jednym miejscu, pod Twoją kontrolą. Zoacz jakie to proste.</p>
-    <hr class="my-4">
-    <p>Nie czekaj i zarejstruj się już dziś.</p>
-
-    <div class="row d-flex justify-content-center">
-      <a class="btn btn-primary btn-lg login-button" href="#" role="button">Zaloguj się</a>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Rejstracja</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <i class="far fa-clock"></i>
-      <h1>ahdas</h1>
-      <p>asdasdasd</p>
-    </div>
-    <div class="col">
-      <%= fa_icon 'camera', class:'fa-3x' %>
-      <h1>ahdas</h1>
-      <p>asdasdasd</p>
-    </div>
-    <div class="col">
-      <%= fa_icon 'camera', class:'fa-3x' %>
-      <h1>ahdas</h1>
-      <p>asdasdasd</p>
-    </div>
-  </div>
+<div class="jumbotron">
+  <h1 class="display-4">Twoje opłaty w jendym miejscu!</h1>
+  <p class="lead">Zarejstuj się i przekonaj, że od teraz Twoje płatności staną się prostsze. Zoszczędź czas i zyskaj kontrole !</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg home-buttons" href="<%= login_path %>" role="button">Logowanie</a>
+    <a class="btn btn-primary btn-lg home-buttons" href="#" role="button">Rejstracja</a>
+  </p>
+</div>

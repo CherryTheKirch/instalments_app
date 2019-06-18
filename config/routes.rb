@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'login#index'
+  get 'dashboard/', to: 'dashboard#index'
+  get '/login', to: 'login#index'
+  root to: 'static_pages#index'
 end
