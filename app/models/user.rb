@@ -3,5 +3,5 @@ class User < ApplicationRecord
 
   # Validations
   validates :email, presence: true
-  validates_length_of :password_digest, minimum: 6
+  validates_length_of :password, minimum: 6
 end
