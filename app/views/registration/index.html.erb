@@ -1,2 +1,36 @@
-<h1>Registration#index</h1>
-<p>Find me in app/views/registration/index.html.erb</p>
+
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+    <div class="modal-content halo">
+      <div class="col-12 user-img">
+        <%= image_tag 'profile-user.png', size: '70x70' %>
+      </div>
+
+      <form class="col-12" method="post" action="/login">
+        <div class="form-group">
+          <label for="email-field">Twój adress email</label>
+          <i class="material-icons form-icon">email</i>
+          <input if="email-field" type="email" name="email" class="form-control" placeholder="Podaj swój email..." />
+        </div>
+        <div class="form-group">
+          <label for="password-field">Twóje hasło</label>
+          <i class="material-icons form-icon">lock</i>
+          <input type="password" name="password" class="form-control" placeholder="Wprowadź hasło..." />
+        </div>
+        <div class="form-group">
+          <label for="password-confirmation-field">Powtórz hasło</label>
+          <i class="material-icons form-icon">lock</i>
+          <input id="password-confirmation-field" type="password" name="password-confirmation" class="form-control" placeholder="Wprowadź hasło ponownie..." />
+        </div>
+        <% if flash[:alert] %>
+          <div class="alert"><%= flash[:alert] %></div>
+        <% end %>
+        <button class="btn login-button" type="submit"><i class="small material-icons arrow-icon">subdirectory_arrow_right</i>Zaloguj</button>
+        <div class="col-12 forgot">
+          <a href="#">Zapomniałeś hasła? </a>
+        </div>
+      </form>
+    </div> <!-- End of modal -->
+
+  </div>
+</div>
