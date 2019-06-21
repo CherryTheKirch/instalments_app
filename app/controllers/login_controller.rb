@@ -7,7 +7,7 @@ class LoginController < ApplicationController
   def check_login
     @user = User.find_by_email params[:email]
 
-    if @user
+    if @user && @user.authenticate(params[:password])
       redirect_to controller: 'dashboard', action: 'index'
     else
       flash.alert = 'Logowanie nie powiodło się'
