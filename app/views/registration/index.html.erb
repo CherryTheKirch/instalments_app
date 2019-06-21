@@ -6,7 +6,7 @@
         <%= image_tag 'profile-user.png', size: '70x70' %>
       </div>
 
-      <form class="col-12" method="post" action="/login">
+      <form class="col-12" method="post" action="/registration">
         <div class="form-group">
           <label for="email-field">Twój adress email</label>
           <i class="material-icons form-icon">email</i>
@@ -20,7 +20,7 @@
         <div class="form-group">
           <label for="password-confirmation-field">Powtórz hasło</label>
           <i class="material-icons form-icon">lock</i>
-          <input id="password-confirmation-field" type="password" name="password-confirmation" class="form-control" placeholder="Wprowadź hasło ponownie..." />
+          <input id="password-confirmation-field" type="password" name="password_confirmation" class="form-control" placeholder="Wprowadź hasło ponownie..." />
         </div>
         <% if flash[:alert] %>
           <div class="alert"><%= flash[:alert] %></div>
