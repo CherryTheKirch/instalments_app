@@ -7,7 +7,7 @@
         <%= image_tag 'profile-user.png', size: '70x70' %>
       </div>
 
-      <form class="col-12" method="post" action="/login/check_login">
+      <form class="col-12" method="post" action="/login">
         <div class="form-group">
           <i class="material-icons form-icon">email</i>
           <input type="email" name="email" class="form-control" placeholder="Podaj swój email..." />
@@ -16,6 +16,9 @@
           <i class="material-icons form-icon">lock</i>
           <input type="password" name="password" class="form-control" placeholder="Wprowadź hasło..." />
         </div>
+        <% if flash[:alert] %>
+          <div class="alert"><%= flash[:alert] %></div>
+        <% end %>
         <button class="btn login-button" type="submit"><i class="small material-icons arrow-icon">subdirectory_arrow_right</i>Zaloguj</button>
         <div class="col-12 forgot">
           <a href="#">Zapomniałeś hasła? </a>
