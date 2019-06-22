@@ -1,0 +1,2 @@
+class Instalment < ApplicationRecord
+end
