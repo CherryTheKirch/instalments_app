@@ -5,9 +5,10 @@ class RegistrationController < ApplicationController
   end
 
   def create_user
-    user = User.new email: params[:email], password: params[:password]
+    @user = User.new email: params[:email], password: params[:password]
 
     if user.save
+      session[:user_id] = @user.id
       redirect_to dashboard_path
     else
       flash.alert = 'Nie udało się utworzyć konta.'
@@ -16,7 +17,7 @@ class RegistrationController < ApplicationController
   end
 
   def check_password_confirmation
-    if params[:password] < 6
+    if params[:password].length < 6
       flash.alert = 'Hasło jest za krótkie.'
       render 'index'
     elsif params[:password] != params[:password_confirmation]
