@@ -1,5 +1,8 @@
 class DashboardController < ApplicationController
   def index
-    @user = User.find session[:user_id]
+    if !(@user = User.find session[:user_id])
+      flash[:alert] = 'Nie jesteś zalogowany'
+      redirect_to controller: 'static_pages', action:'index'
+    end
   end
 end
